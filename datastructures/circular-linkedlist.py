@@ -12,7 +12,11 @@ class LinkedList:
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
-        self.tail.next = new_node
+
+        if self.tail is None:
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
 
     def print_nodes(self):
         node = self.head
