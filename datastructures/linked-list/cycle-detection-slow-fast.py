@@ -3,7 +3,7 @@ class ListNode:
     self.val = x
     self.next = None
 
-def hasCycle(head) -> bool:
+def has_cycle(head) -> bool:
     if not head:
         return False
 

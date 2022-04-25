@@ -3,17 +3,15 @@ class ListNode:
     self.val = x
     self.next = None
 
-def hasCycle(head) -> bool:
+def has_cycle(head) -> ListNode:
     if not head:
-        return False
+        return None
     node = head
     visited_dict = {}
     while True:
         if node in visited_dict:
-            return True
+            return node
         visited_dict[node] = True
         if node.next is None:
-            return False
+            return None
         node = node.next
-
-    # return False
